@@ -5,6 +5,8 @@ import org.xml.sax.InputSource;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.StringReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,10 +19,12 @@ public class XmlReader {
     public XmlReader(String path) {
         this.PATH = path;
     }
-    public List<Manufacturer> readXml(String xml) {
-        List<Manufacturer> manufacturers = new ArrayList<>();
+    public ArrayList<Manufacturer> read() {
+        ArrayList<Manufacturer> manufacturers = new ArrayList<>();
 
         try {
+            String xml = new String(Files.readAllBytes(Paths.get(PATH)));
+
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             InputSource inputSource = new InputSource(new StringReader(xml));

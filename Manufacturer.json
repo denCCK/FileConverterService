@@ -1,34 +1,68 @@
-[
-  {
-    "ARCHITECTURE": "x86",
-    "NAME": "Intel",
-    "CPUs": {
-      "Core i5": 4,
-      "Core i7": 6
-    }
-  },
-  {
-    "ARCHITECTURE": "x86",
-    "NAME": "AMD",
-    "CPUs": {
-      "Ryzen 5": 6,
-      "Ryzen 7": 8
-    }
-  },
-  {
-    "ARCHITECTURE": "ARM",
-    "NAME": "Qualcomm",
-    "CPUs": {
-      "Snapdragon 888": 8,
-      "Snapdragon 865": 6
-    }
-  },
-  {
-    "ARCHITECTURE": "ARM",
-    "NAME": "Apple",
-    "CPUs": {
-      "A14 Bionic": 6,
-      "M1": 8
-    }
+{
+  "manufacturers": {
+    "architecture": [
+      {
+        "manufacturer": [
+          {
+            "name": "Intel",
+	    "processor": [
+                {
+                  "cores": "4",
+                  "name": "Core i5"
+                },
+                {
+                  "cores": "6",
+                  "name": "Core i7"
+                }
+              ]
+          },
+          {
+            "name": "AMD",
+	    "processor": [
+                {
+                  "cores": "6",
+                  "name": "Ryzen 5"
+                },
+                {
+                  "cores": "8",
+                  "name": "Ryzen 7"
+                }
+              ]
+          }
+        ],
+      "name": "x86"
+      },
+      {
+        "manufacturer": [
+          {
+            "name": "Qualcomm",
+	    "processor": [
+                {
+                  "cores": "8",
+                  "name": "Snapdragon 888"
+                },
+                {
+                  "cores": "6",
+                  "name": "Snapdragon 865"
+                }
+              ]
+          },
+          {
+            "name": "Apple",
+	    "processor": [
+                {
+                  "cores": "8",
+                  "name": "M1"
+                },
+                {
+                  "cores": "6",
+                  "name": "A14 Bionic"
+                }
+              ]
+          }
+        ],
+      "name": "ARM"
+      }
+    ]
   }
-]
+}
