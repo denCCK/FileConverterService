@@ -16,8 +16,8 @@ public class Main {
             return;
         }
 
-        String inputFile = "Manufacturer.xml";
-        String outputFile = "output.json";
+        String inputFile = args[0];
+        String outputFile = args[1];
 
         String inputExtension = getFileExtension(inputFile);
 
