@@ -23,13 +23,14 @@ public class XmlWriter {
     public XmlWriter(ArrayList<Manufacturer> manufacturers) {
         this.MANUFACTURERS = manufacturers;
     }
-    public void writeXml(String filePath) {
+    public void write(String filePath) {
         try {
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 
             // Создание корневого элемента
             Document doc = docBuilder.newDocument();
+            doc.setXmlStandalone(true);
             Element rootElement = doc.createElement("manufacturers");
             doc.appendChild(rootElement);
 
