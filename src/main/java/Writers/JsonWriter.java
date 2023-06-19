@@ -6,14 +6,19 @@ import com.google.gson.GsonBuilder;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-public class JsonReader {
+public class JsonWriter {
+    private final ArrayList<Manufacturer> MANUFACTURERS;
 
-    public void writeJson(List<Manufacturer> manufacturers, String filePath) {
+    public JsonWriter(ArrayList<Manufacturer> manufacturers) {
+        this.MANUFACTURERS = manufacturers;
+    }
+    public void writeJson(String filePath) {
         try (FileWriter writer = new FileWriter(filePath)) {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            gson.toJson(manufacturers, writer);
+            gson.toJson(MANUFACTURERS, writer);
         } catch (IOException e) {
             e.printStackTrace();
         }

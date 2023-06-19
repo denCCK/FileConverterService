@@ -12,6 +12,11 @@ import java.util.Map;
 import Model.Manufacturer;
 
 public class XmlReader {
+    private final String PATH;
+
+    public XmlReader(String path) {
+        this.PATH = path;
+    }
     public List<Manufacturer> readXml(String xml) {
         List<Manufacturer> manufacturers = new ArrayList<>();
 
