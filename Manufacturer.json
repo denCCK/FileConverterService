@@ -1,0 +1,34 @@
+[
+  {
+    "ARCHITECTURE": "x86",
+    "NAME": "Intel",
+    "CPUs": {
+      "Core i5": 4,
+      "Core i7": 6
+    }
+  },
+  {
+    "ARCHITECTURE": "x86",
+    "NAME": "AMD",
+    "CPUs": {
+      "Ryzen 5": 6,
+      "Ryzen 7": 8
+    }
+  },
+  {
+    "ARCHITECTURE": "ARM",
+    "NAME": "Qualcomm",
+    "CPUs": {
+      "Snapdragon 888": 8,
+      "Snapdragon 865": 6
+    }
+  },
+  {
+    "ARCHITECTURE": "ARM",
+    "NAME": "Apple",
+    "CPUs": {
+      "A14 Bionic": 6,
+      "M1": 8
+    }
+  }
+]
