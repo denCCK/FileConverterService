@@ -11,10 +11,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-//        if (args.length < 2) {
-//            System.out.println("Необходимо указать пути к файлам XML и JSON");
-//            return;
-//        }
+        if (args.length < 2) {
+            System.out.println("Необходимо указать пути к файлам XML и JSON");
+            return;
+        }
 
         String inputFile = "Manufacturer.xml";
         String outputFile = "output.json";
